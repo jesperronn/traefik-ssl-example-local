@@ -1,0 +1,27 @@
+# Main traefik configuration file
+
+accesslog: true
+api:
+  insecure: true
+
+entryPoints:
+  web:
+    address: :80
+    http:
+      redirections:
+        entryPoint:
+          to: web-secure
+          scheme: https
+
+  web-secure:
+    address: :443
+
+log:
+  level: INFO
+
+providers:
+  docker:
+    exposedByDefault: false
+
+  file:
+    filename: /etc/traefik/dynamic_config.yml
