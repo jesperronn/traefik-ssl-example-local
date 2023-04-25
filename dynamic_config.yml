@@ -1,5 +1,6 @@
 # tls/https configuration
 
+
 tls:
   stores:
     default:
@@ -8,5 +9,7 @@ tls:
         keyFile: /etc/ssl/certs/local.key
 
   certificates:
-    - "certFile: /etc/ssl/local.crt"
-    - "keyFile: /etc/ssl/local.key"
+    - certFile: /etc/ssl/certs/local.crt
+      keyFile: /etc/ssl/certs/local.key
+      stores:
+        - default

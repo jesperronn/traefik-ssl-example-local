@@ -24,5 +24,5 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./traefik.yml:/etc/traefik/traefik.yml
       - ./dynamic_config.yml:/etc/traefik/dynamic_config.yml
-      - ./certs/local.crt:/etc/ssl/local.crt
-      - ./certs/local.key:/etc/ssl/local.key
+      - ./certs/local.crt:/etc/ssl/certs/local.crt
+      - ./certs/local.key:/etc/ssl/certs/local.key
