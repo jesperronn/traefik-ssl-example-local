@@ -1,6 +1,7 @@
 # Main traefik configuration file
 
 accesslog: true
+
 api:
   insecure: true
 
